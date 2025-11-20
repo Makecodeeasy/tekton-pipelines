@@ -1,0 +1,13 @@
+
+apiVersion: tekton.dev/v1
+kind: Task
+metadata:
+  name: hello
+  namespace: tekton-pipelines
+spec:
+  steps:
+    - name: echo
+      image: alpine
+      script: |
+        #!/bin/sh
+        echo "Hello World"
